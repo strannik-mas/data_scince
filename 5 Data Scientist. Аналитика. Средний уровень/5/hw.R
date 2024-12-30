@@ -1,0 +1,11 @@
+getwd()
+dat <- read.csv('./5/data/experiment.csv')
+dim(dat)
+nrow(dat)
+str(dat)
+n = nrow(dat)
+p = sum(dat$test)
+pc = sum(dat$control)
+
+BinomCI(p, n, conf.level = 0.90)
+BinomCI(pc, n, conf.level = 0.90)
